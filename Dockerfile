@@ -1,6 +1,4 @@
-# devops-backend
-
-FROM node:14
+FROM node:lts-alpine
 
 # Create app directory
 WORKDIR /usr/src/app
@@ -19,10 +17,3 @@ EXPOSE 7000
 
 # Start server
 CMD ["node", "./bin/www"]
-
-
-
-docker build -t erwinlo/devops-backend .
-
-docker images
-

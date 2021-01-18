@@ -2,7 +2,7 @@ const mysql = require('mysql');
 
 // set parameters
 parameters = {
-     host: 'localhost',
+     host: '34.126.91.85',
      port: 3306,
      user: 'root',
      password: 'password', 
