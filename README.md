@@ -21,7 +21,7 @@ EXPOSE 7000
 CMD ["node", "./bin/www"]
 
 
-
+# Commands to build container
 docker build -t erwinlo/devops-backend .
 
 docker images
