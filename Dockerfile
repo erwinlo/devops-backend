@@ -1,4 +1,5 @@
 FROM node:lts-alpine
+MAINTAINER erwinlo@u.nus.edu
 
 # Create app directory
 WORKDIR /usr/src/app
