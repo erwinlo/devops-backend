@@ -90,7 +90,7 @@ on:
 ```
 
 Google's Project ID and Service Account key need to be stored in Github Secrets, so that the workflow can publish to google cloud successfully.
-![Secrets](images/secrets.jpg)
+<img src="images/secrets.jpg" width="500" />
 
 The workflow will then build our docker image based on Dockerfile we created.
 ```yaml
@@ -115,4 +115,26 @@ Finally, the container will be rolled out to Kubernetes engine for deployment.
 kubectl rollout status deployment/$DEPLOYMENT_NAME
 ```
 
+
 ## Running the CI/CD workflow
+When there is any push to github repo, Github actions will automatically trigger the workflow
+<img src="images/github_actions.jpg" width="500" />
+
+The code was successfully built, packaged into docker container, and published to Google's Kubernetes cluster.
+
+## Accessing the server
+We can access the backend server by going to the ip address of Google's load balancer: [http://35.240.168.51](http://35.240.168.51)
+![](images/loadbalancer.jpg)
+
+
+## Setting up subdomain to point to server's ip address
+The last step is creating a subdomain for our backend server. This subdomain will be easier to remember and type instead of ip address.
+We can use the free service of freedns.afraid.org where many domains are available to be used.
+![](images/freedns.jpg)
+
+Our backend server can be accessed at [http://backend.bot.nu](http://backend.bot.nu)
+
+Some API endpoints that can be accessed on our server:
+* [http://backend.bot.nu/users/2](http://backend.bot.nu/users/2)
+* [http://backend.bot.nu/transactions/2](http://backend.bot.nu/transactions/2)
+* [http://backend.bot.nu/bankss/2](http://backend.bot.nu/banks/2)
