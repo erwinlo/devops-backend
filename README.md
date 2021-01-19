@@ -137,4 +137,4 @@ Our backend server can be accessed at [http://backend.bot.nu](http://backend.bot
 Some API endpoints that can be accessed on our server:
 * [http://backend.bot.nu/users/2](http://backend.bot.nu/users/2)
 * [http://backend.bot.nu/transactions/2](http://backend.bot.nu/transactions/2)
-* [http://backend.bot.nu/bankss/2](http://backend.bot.nu/banks/2)
+* [http://backend.bot.nu/banks/2](http://backend.bot.nu/banks/2)
